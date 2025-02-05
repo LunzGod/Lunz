@@ -7,18 +7,18 @@ function preguntaInteraccion(respuesta) {
     const respuestaDiv = document.getElementById('respuesta');
 
     if (respuesta === 'si') {
-        respuestaTexto.innerText = "¡Sí! 😍 Me encantaría pasar el día contigo.";
+        respuestaTexto.innerText = "Yo sabia y siempre lo supe si quieres reinicialo para que veas que pasaba si decias que no.";
         respuestaDiv.style.display = 'block';
         btnSi.disabled = true; // Desactiva el botón "Sí"
         btnNo.disabled = true; // Desactiva el botón "No"
     } else if (respuesta === 'no') {
         noCount++;
-        if (noCount < 3) {
-            respuestaTexto.innerText = "¡Oh no! 😢 ¿Seguro? Piensa en ello... ¿Quizás me das una oportunidad?";
-        } else if (noCount < 6) {
-            respuestaTexto.innerText = "¡No lo puedo creer! 😟 Estoy seguro/a de que cambiarás de opinión...";
+        if (noCount < 2) {
+            respuestaTexto.innerText = "Ah con que si veniste a ver ";
+        } else if (noCount < 4) {
+            respuestaTexto.innerText = "Siguele picando";
         } else {
-            respuestaTexto.innerText = "¡Sigue diciendo que no, pero te voy a convencer! 💖";
+            respuestaTexto.innerText = "De todas formas me ibas a decir que si";
         }
 
         // Cambiar tamaño de los botones
